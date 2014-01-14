@@ -66,10 +66,10 @@
 #pragma mark - UI interactions - 
 
 -(void)presentInfo:(UIGestureRecognizer*)gesture{
-    self.modalPresentationStyle = UIModalPresentationCustom;
-    
+
     ModalViewController *modal = [[ModalViewController alloc]init];
     modal.transitioningDelegate = self;
+    modal.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:modal animated:YES completion:^{
     }];
 }
